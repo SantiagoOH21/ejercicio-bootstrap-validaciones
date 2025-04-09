@@ -96,7 +96,10 @@ if (document.getElementById("userForm")) {
     if (!passwordRegularExpression.test(userPassword1)) {
       inputPassword1.className = "form-control border border-danger";
       checkPass1 = false;
-      showMessage("danger", "Contraseña no válida");
+      showMessage(
+        "danger",
+        "Contraseña no válida. Debe contener 1 número, 1 letra mayúscula, 1 letra minúscula, 1 número no alfanumérico y 8-16 caracteres sin espacio"
+      );
     } else if (userPassword1 !== userPassword2) {
       inputPassword2.className = "form-control border border-danger";
       checkPass2 = false;
@@ -189,7 +192,6 @@ if (document.getElementById("userForm")) {
     const titleCard = document.createElement("h5");
     titleCard.className = "card-title";
     titleCard.textContent = `${user.name}`;
-    console.log(user.name);
 
     const paragraph = document.createElement("p");
     paragraph.className = "card-text";
