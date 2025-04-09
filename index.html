@@ -42,12 +42,12 @@
       </div>
     </nav>
 
-    <main class="m-4 bg-light" style="max-width: 50%">
-      <h1 class="mb-5 bg-info text-center p-4 rounded-3">
+    <main class="mx-4 my-1 bg-light" style="max-width: 50%">
+      <h1 class="mb-2 bg-info text-center p-3 rounded-3">
         FORMULARIO PARA CREAR USUARIO
       </h1>
       <form id="userForm" class="px-4">
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="userName" class="form-label">Nombre</label>
           <input
             type="text"
@@ -57,7 +57,7 @@
           />
         </div>
 
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="userInputEmail" class="form-label"
             >Correo electrónico</label
           >
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="userInputPassword1" class="form-label">Contraseña</label>
           <input
             type="password"
@@ -88,14 +88,49 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="userInputPassword2" class="form-label"
             >Repite Contraseña</label
           >
           <input type="password" class="form-control" id="userInputPassword2" />
         </div>
 
-        <button type="submit" class="btn btn-info mb-3" id="submitBtn">
+        <p class="form-label">Seleccione su sexo:</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="userSex"
+            id="userSex1"
+            value="woman"
+          />
+          <label class="form-check-label" for="userSex1"> Mujer </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="userSex"
+            id="userSex2"
+            value="man"
+          />
+          <label class="form-check-label" for="userSex2"> Hombre </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="userSex"
+            id="userSex3"
+            value="nonBinary"
+            checked
+          />
+          <label class="form-check-label" for="userSex3"> No binario </label>
+        </div>
+
+        <button type="submit" class="btn btn-info my-4" id="submitBtn">
           Crear Usuario
         </button>
       </form>
